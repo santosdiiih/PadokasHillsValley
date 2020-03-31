@@ -75,7 +75,7 @@
             ?>
         </div>
     <script src="js/jquery.js"></script>
-    <script src="js/funcao.js"> 
+    <script src="js/funcaoMenu.js"> 
         abreMenu();
     </script>
     </body>

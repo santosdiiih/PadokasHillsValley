@@ -107,3 +107,9 @@
     </div>          
 </div>
 
+<div id="containerSociais">
+    <div class="social face"></div>
+    <div class="social whats"></div>
+    <div class= "social insta"></div>
+</div>
+
