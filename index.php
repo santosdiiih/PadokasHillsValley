@@ -9,7 +9,7 @@
     #slideHome{
         width: 100%;
         height: 400px;
-        display: flex;
+        float: left;
         margin-bottom: 30px;
         margin: 0;
         overflow: hidden;
@@ -19,7 +19,7 @@
         height: 350px;
         margin-left: 100px;
         margin-right: 100px;
-        
+        float: left;
     }
     figure img{
         width: 100%;
@@ -28,6 +28,7 @@
         align-content: center;
         border-radius: 30px;
         box-shadow: 0px 30px 20px black;
+        float: left;
     }
     #previous, #next{
         position: absolute;
@@ -35,9 +36,12 @@
         height: 300px;
         z-index: 970;
         text-align: center;
-        padding-top: 150px;
+/*        padding-top: 150px;*/
         box-sizing: border-box;
         font-size: 3.2em;
+        float: left;
+        margin-top: -250px;
+
     }
     #previous {
         margin-left: 65px;
@@ -156,7 +160,7 @@
                         </div>
                     </div>
                 </div>
-                <!--  Area do Footer  -->
+                            <!--  Area do Footer  -->
                 <?php 
                     include_once("footer.php")
                 ?>

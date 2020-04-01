@@ -26,40 +26,52 @@
                     <h1> Promoções do Mês </h1>
                     <div id="produtoInformacao" class="alinhamentoAoCentro">
                         <div class="produtoCombos">
-                            <div id="produtoComboImagem" class="alinhamentoAoCentro"></div>
-                            <div id="produtoComboTexto" class="texto">
+                            <div id="produtoComboImagem" class="alinhamentoAoCentro">
+                                
+                                    <img src="imagens/combo1.jpeg">
+                                 
+                            </div>
+                            <div class="texto produtoComboTexto">
                                 <p>
-                                    deja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto
+                                    Neste combo temos uma porção de batatas, nugget, dois hamburguers e coxinhas para saborear a dois.
                                 </p>
                             </div>
                         </div>
                         <div class="produtoCombos">
-                            <div id="produtoComboImagem" class="alinhamentoAoCentro"></div>
-                            <div id="produtoComboTexto" class="texto">
+                            <div id="produtoComboImagem" class="alinhamentoAoCentro">
+                                <img src="imagens/combo2.jpg">
+                            </div>
+                            <div class="texto produtoComboTexto">
                                 <p>
-                                    deja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto
+                                    Compo exclusivo para quem resgatar o cupom pelo smartphone
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div id="produtoImagem"></div>
+                    <div id="produtoImagem" class="alinhamentoAoCentro">
+                        <img src="imagens/combo3.jpg">
+                    </div>
                 </div>
                 <div id="containerProdutoPromocao" class="alinhamentoAoCentro">
                     <h1> Mega Promoções </h1>
                     <div id="containerProdutoPromocao" class="alinhamentoAoCentro">
                         <div class="produtoPromocaoCombo alinhamentoAoCentro">
-                            <div class="produtoPromocaoImagem alinhamentoAoCentro"></div>
+                            <div class="produtoPromocaoImagem alinhamentoAoCentro">
+                                <img src="imagens/combo4.jpg" >
+                            </div>
                             <div class="produtoPromocaoTexto texto">
                                 <p>
-                                    deja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto
+                                    Neste combo também temos um refrigerante de sua preferência incluso no combo.
                                 </p>
                             </div>
                         </div>
                         <div class="produtoPromocaoCombo alinhamentoAoCentro"> 
-                            <div class="produtoPromocaoImagem alinhamentoAoCentro"></div>
+                            <div class="produtoPromocaoImagem alinhamentoAoCentro">
+                                <img src="imagens/combo5.jpg">
+                            </div>
                             <div class="produtoPromocaoTexto texto">
                                 <p>
-                                    deja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto
+                                    E para aqueles que preferem algo mais natural também temos combos com sucos naturais de diversos sabores.
                                 </p>
                             </div>
                         </div>
@@ -73,6 +85,7 @@
                 include_once("footer.php")
             ?>
         </div>
+        
     <script src="js/jquery.js"></script>
     <script src="js/funcaoMenu.js"> 
         abreMenu();

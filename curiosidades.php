@@ -11,15 +11,16 @@
             #slideCurioidade{
                 width: 100%;
                 height: 250px;
-                display: flex;
                 margin-bottom: 30px;
                 overflow: hidden;
+/*                float: left;*/
             }
             figure{
                 width: 800px;
                 height: 350px;
                 margin-left: 200px;
                 margin-right: 200px;
+                float: left;
                
             }
             figure img {
@@ -28,17 +29,20 @@
                 display: flex;
                 align-content: center;
                 border-radius: 30px;
+                float: left;
                 
             }
             #previous, #next{
-                position: absolute;
+                 position: absolute;
                 width: 35px;
-                height: 250px;
+                height: 300px;
+                z-index: 970;
                 text-align: center;
-                font-size: 3.2em;
-                z-index: 971;
+        /*        padding-top: 150px;*/
                 box-sizing: border-box;
-                padding-top: 105px;
+                font-size: 3.2em;
+                float: left;
+                margin-top: -270px;
             }
             #previous {
                 margin-left: 150px;
@@ -49,6 +53,7 @@
             #previous:hover, #next:hover{
                 cursor: pointer;
                 transition: 1.5s;
+                background-color: #ffffff10;
             }
         </style>
         
@@ -98,7 +103,7 @@
                     <h1> Valores </h1>
                     <div class="texto">
                         <p> 
-                            Somos uma empresa familiar engajada  em promovos conforto aos nossos clientes e funcionarios.
+                            O compromisso com nnossos clientes, a etica diante da sociedade, a inovação de nosso produtos e por fim a dedicação com tudo oque fazemos são nossos principais valores.
                         </p>
                     </div>
                 </div>
@@ -106,7 +111,7 @@
                     <h1> Visão </h1>
                     <div class="texto"> 
                         <p>
-                            é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os e
+                            Desejamos ser referencia e lider em performance, atraindo a confiança de nossos colaboradores da forma mais honesta possível, visando sempre o conforto dos nossos clientes. 
                         </p>
                     </div>
                 </div>
@@ -114,7 +119,7 @@
                     <h1> Missão  </h1>
                     <div class="texto"> 
                         <p>
-                            é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os e
+                            A padokas é uma empresa que visa todos os gostos, com a inteção de promover momentos únicos na vida de seus colabores sendo eles seus clientes, funcionarios e patrocinadores.
                         </p>
                     </div>
                 </div>

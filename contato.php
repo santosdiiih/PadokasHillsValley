@@ -124,11 +124,12 @@
                     
                 </div>
                 <!--  Area do Footer  -->
-                <?php 
+                 <?php 
                     include_once("footer.php")
                 ?>
                 
         </div>
+       
     <script src="js/jquery.js"></script>
     <script src="js/funcaoMenu.js"> 
         abreMenu();

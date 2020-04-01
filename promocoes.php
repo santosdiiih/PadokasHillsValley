@@ -26,45 +26,69 @@
                     <div class="promocoesTexto texto">
                         <h1> Café </h1>
                         <p>
-                            deja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum 
+                            O café da manhã é a refeição mais importante do nosso dia, pois ele é reponsável por nossas energias para começar o dia.
                         </p>
                     </div>
-                    <div class="promocoesImagem alinhamentoAoCentro"></div>
-                    <div class="promocoesImagem alinhamentoAoCentro"></div>
-                    <div class="promocoesImagem alinhamentoAoCentro"></div>
+                    <div class="promocoesImagem alinhamentoAoCentro">
+                        <img src="imagens/cafeDaManha.jpg">
+                    </div>
+                    <div class="promocoesImagem alinhamentoAoCentro">
+                        <img src="imagens/cafe-da-manha.jpg">
+                    </div>
+                    <div class="promocoesImagem alinhamentoAoCentro">
+                        <img src="imagens/-cafe-da-manha-padaria.jpg">
+                    </div>
                 </div>
                 <div class="containerPromocoes alinhamentoAocentro">
                     <div class="promocoesTexto texto">
                         <h1> Lanches </h1>
                         <p>
-                            deja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum 
+                            Os lanches foram pensados naqueles que não querem comer mas não abrem mão da comidas saldáveis, promovendo leveza e saciando a fome. 
                         </p>
                     </div>
-                    <div class="promocoesImagem alinhamentoAoCentro"></div>
-                    <div class="promocoesImagem alinhamentoAoCentro"></div>
-                    <div class="promocoesImagem alinhamentoAoCentro"></div>
+                    <div class="promocoesImagem alinhamentoAoCentro">
+                        <img src="imagens/lanche-o-melhor-do-mundo-da-real.jpg">
+                    </div>
+                    <div class="promocoesImagem alinhamentoAoCentro">
+                        <img src="imagens/lanches-naturais.jpg"> 
+                    </div>
+                    <div class="promocoesImagem alinhamentoAoCentro">
+                        <img src="imagens/padarias-lanches-1.jpg">
+                    </div>
                 </div>
                 <div class="containerPromocoes alinhamentoAoCentro">
                     <div class="promocoesTexto texto">
                         <h1> Acompanhamentos </h1>
                         <p>
-                            deja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum 
+                            Nossas sobremessas são famossas não apenas pelo sabor delicioso mas também por sua aparência chamativa. 
                         </p>
                     </div>
-                    <div class="promocoesImagem"></div>
-                    <div class="promocoesImagem"></div>
-                    <div class="promocoesImagem"></div>
+                    <div class="promocoesImagem">
+                        <img src="imagens/acompanhamento.jpg">
+                    </div>
+                    <div class="promocoesImagem">
+                        <img src="imagens/acompanhamento2.jpg">
+                    </div>
+                    <div class="promocoesImagem">
+                        <img src="imagens/acompanhamento4.jpg">
+                    </div>
                 </div>
                 <div class="containerPromocoes alinhamentoAoCentro">
                     <div class="promocoesTexto texto">
                         <h1> Bebidas </h1>
                         <p>
-                            deja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum 
+                            Com objetivo de atender todos os publicos nossa padaria busca inovar e ampliar nossso  cardapio de bebidas. 
                         </p>
                     </div>
-                    <div class="promocoesImagem"></div>
-                    <div class="promocoesImagem"></div>
-                    <div class="promocoesImagem"></div>
+                    <div class="promocoesImagem">
+                        <img src="imagens/bebidas.jpg">
+                    </div>
+                    <div class="promocoesImagem">
+                        <img src="imagens/bebidaDiversidade.jpg">
+                    </div>
+                    <div class="promocoesImagem">
+                        <img src="imagens/padaria-cafe.png">
+                    </div>
                 </div>
                 
             </div>

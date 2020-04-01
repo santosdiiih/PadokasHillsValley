@@ -26,33 +26,44 @@
                     <div id="sobreInicio" class="texto alinhamentoAoCentro">
                         <h1> Sobre Inicio </h1>
                         <p>
-                            o contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College.
+                            O inicio foi o nosso primeiro desafio, ninguem conhecia a nossa marca e com tantas marcas consagradas, tivemos que lutar duro para provar o nosso valor.
                         </p>
                     </div>
-                    <div id="sobreImagem" class="alinhamentoAoCentro"> </div>
-                    
+                    <div id="sobreImagem" class="alinhamentoAoCentro">
+                        <figure>
+                            <img src="imagens/boas-vindas.jpg" alt="imagem boas de vindas"> 
+                        </figure>                        
+                    </div>
                 </div>
                 <div class="conteudoSobre alinhamentoAoCentro">
                     <div id="sobreComoFoi" class="texto alinhamentoAoCentro">
                        <h1> Como foi o Inicio </h1>
                         <p>
-                            o contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC. Richard McClintock, um professor de latim do Hampden-Sydney College
+                            Diante de um mercado de trabalho tão competitivo selecionamos os nossos melhores candidatos depositando toda a nossa confiança em seu trabalho e valorizando seu potencial.
                         </p>
                     </div>
-                    <div id="sobreImagemComoFoi" class="alinhamentoAoCentro"> </div>
+                    <div id="sobreImagemComoFoi" class="alinhamentoAoCentro">
+                        <figure>
+                            <img src="imagens/contratacao-e-recrutamento-de-novos-funcionarios.jpg">
+                        </figure>
+                    </div>
                 </div>
                 <div class="conteudoSobre alinhamentoAoCentro">
                     <div id="sobreAtualmente" class="texto alinhamentoAoCentro">
                         <h1> Atualmente </h1>
                         <p> 
-                            o contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser 
+                            O nosso quadro de funcionario vem crescendo, sempre atendendo e dando oportunidade a todos, pois todos merecem um voto de confiança. 
                         </p>
                     </div>
-                    <div id="sobreImagemAtualmente" class="alinhamentoAoCentro"> </div>
+                    <div id="sobreImagemAtualmente" class="alinhamentoAoCentro"> 
+                        <figure>
+                            <img src="imagens/bakery-business.jpg">
+                        </figure>
+                    </div>
                     <div id="sobreInformacoesAdicionais" class="texto alinhamentoAoCentro">
                         <h1> Informações Adicionais </h1>
                         <p>
-                            o contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000 anos, suas raízes podem ser encontradas em
+                            Caso esteja interessado em fazer parte de uma das maiores redes alimenticias da América Latina entre em contato e deixe seu curriculo que uma hora retornaremos o contato.
                         </p>
                     </div>
                 </div>
