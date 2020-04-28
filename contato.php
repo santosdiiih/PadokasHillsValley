@@ -1,3 +1,7 @@
+<?php
+    
+?>
+
 <!DOCTYPE>
 <html lang="pt-br">
     <head>
@@ -23,33 +27,33 @@
                     <div class="dadosPadronizados">
                         <div class="descricao"> Nome*: </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtNome" value="">
+                            <input type="text" name="txtNome" value="" maxlength="50">
                         </div>
                     </div>
                     <div class="dadosPadronizados">
-                        <div class="descricao"> Telefone*: 
+                        <div class="descricao" > Telefone*: 
 
                         </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtNome" value="">
+                            <input type="text" name="txtTelefone" value="" maxlength="10" id="telefone">
                         </div>
                     </div>
                     <div class="dadosPadronizados">
                         <div class="descricao"> Celular*: </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtNome" value="">
+                            <input type="text" name="txtCell" value="" maxlength="11" id="celular">
                         </div>
                     </div>
                     <div class="dadosPadronizados">
                         <div class="descricao"> Email*: </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtNome" value="">
+                            <input type="text" name="txtEmail" value="" maxlength="50">
                         </div>
                     </div>
                      <div class="dadosPadronizados">
                         <div class="descricao"> Cep: </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtNome" value="" id="cep">
+                            <input type="text" name="txtCep" value="" id="cep" maxlength="9">
                         </div>
                     </div>
                     <div class="dadosPadronizados">
@@ -75,20 +79,23 @@
 
                         </div>
                         <div class="entradaDeDados"> 
-                            <input type="url" name="txtNome" value="">
+                            <input type="url" name="txtNome" value="" maxlength="50">
                         </div>
                     </div>
                     <div class="dadosPadronizados">
                         <div class="descricao"> Link no Facebook: </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtNome" value="">
+                            <input type="text" name="txtNome" value="" maxlength="50">
                         </div>
                     </div>
                     <div class="dadosPadronizados">
-                        <div class="descricao"> Opinião: </div>
+                        <div class="descricao"> Filtro: </div>
                         <div class="entradaDeDados"> 
-                            <input type="radio" name="rdoSugestao" value="sugestao">    Sugestão.
-                            <input type="radio" name="rdoSugestao" value="critica"> Critica.
+                            <select>
+                                <p> Filtro </p>
+                                <option> Sugestâo  </option>
+                                <option> Critica </option>
+                            </select>
                         </div>
                     </div>
                     <div class="dadosPadronizados">
@@ -108,7 +115,7 @@
                     <div class="dadosPadronizados">
                         <div class="descricao"> Profisão*: </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtProfisao" value="">
+                            <input type="text" name="txtProfisao" value="" maxlength="50">
                         </div>
                     </div>
                     <div class="dadosPadronizados">
@@ -135,6 +142,6 @@
         abreMenu();
     </script>
     <script src="js/funcaoCep.js"></script>
-
+    <script src="js/funcaoTel.js"></script>
     </body>
 </html>

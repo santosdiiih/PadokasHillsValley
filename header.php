@@ -90,12 +90,12 @@
                     <div id="login">
                         <div id="nome">
                             <p> Nome: 
-                                <input type="text" name="nome" value="">
+                                <input type="text" name="nome" value="" maxlength="50">
                             </p>
                         </div>
                         <div id="senha">
                             <p> Senha: 
-                                <input type="password" name="senha" value="">
+                                <input type="password" name="senha" value="" maxlength="25">
                             </p>
                         </div>
                         <div id="botao">
