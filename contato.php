@@ -1,5 +1,83 @@
 <?php
-    
+     include_once('BD/conecta.php');
+
+    $conex = conexaoMysql(); 
+
+    #inicializando a variavel 
+    $nome = '';
+    $telefone = '';
+    $celular = '';
+    $email = '';
+    $cep = '';
+    $endereco = '';
+    $cidade = '';
+    $bairro = '';
+    $homePage = '';
+    $linkFacebook = '';
+    $filtro = '';
+    $mensagem = '';
+    $sexo = '';
+    $profissao = '';
+    $idContato = '';
+
+    # verifica se o botao foi acionado 
+    if(isset($_POST['btnEnviar'])){
+       $nome = $_POST['txtNome'];
+       $telefone = $_POST['txtTelefone'];
+       $celular = $_POST['txtCell'];
+       $email = $_POST['txtEmail'];
+       $cep = $_POST['txtCep'];
+       $endereco = $_POST['txtEndereco'];
+       $cidade = $_POST['txtCidade'];
+       $bairro = $_POST['txtBairro'];
+       $homePage = $_POST['txtHomePage'];
+       $linkFacebook = $_POST['txtLinkFace'];
+       $filtro = $_POST['sltFiltro'];
+       $mensagem = $_POST['txtMensagem'];
+       $sexo = $_POST['rdoGenero'];
+       $profissao = $_POST['txtProfissao'];
+       
+
+        $sql = "select idContato from tblContato";
+
+        $tblContato = mysqli_query($conex,$sql);
+
+        $idContato = mysqli_fetch_assoc($tblContato);
+      
+        
+        
+       
+       
+    };
+    if(!($nome || $telefone || $celular || $email || $mensagem || $profissao ) == ""){
+       # script para enviar as informações ao BD
+       
+
+       
+
+        
+
+       $sql = "insert into tblContato(nome, telefone, celular, email, cep, endereco, cidade, bairro, 
+                homePage, linkFacebook, filtro, mensagem, sexo, profissao) 
+               values ('".$nome."', '".$telefone."', '".$celular."', '".$email."', 
+               '".$cep."', '".$endereco."', '".$cidade."', '".$bairro."',
+               '".$homePage."', '".$linkFacebook."', '".$filtro."', '".$mensagem."',
+               '".$sexo."', '".$profissao."')";           
+        
+        #echo($sql);
+        # EXECUTANDO O INSERT NO BANCO DE DADOS
+        if(mysqli_query($conex ,$sql)){
+            echo("<script> alert('registro inserido com sucesso') </script>");
+        }
+        else{
+            echo("<script> alert('erro ao salvar os dados') </script>");
+        }   
+        
+    }
+    else{
+        #mensagem de erro para que o usuario verifique os campos vazios
+        echo ("<script> alert('verifique os campos vazios ') </script>");
+    }
 ?>
 
 <!DOCTYPE>
@@ -22,12 +100,12 @@
                 <div class="conteudo">
                     <div id="formularioContato" class="alinhamentoAoCentro texto">
                     <h1> Entre em Contato </h1>
-                    <form method="post" action="contato.php" name="frmContado">
+                <form method="post" action="contato.php" name="frmContado">
                         
                     <div class="dadosPadronizados">
                         <div class="descricao"> Nome*: </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtNome" value="" maxlength="50">
+                            <input type="text" name="txtNome" value="" maxlength="50" required>
                         </div>
                     </div>
                     <div class="dadosPadronizados">
@@ -35,19 +113,19 @@
 
                         </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtTelefone" value="" maxlength="10" id="telefone">
+                            <input type="text" name="txtTelefone" value="" maxlength="10" id="telefone" placeholder="Digite o 11 antes do numero" required>
                         </div>
                     </div>
                     <div class="dadosPadronizados">
                         <div class="descricao"> Celular*: </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtCell" value="" maxlength="11" id="celular">
+                            <input type="text" name="txtCell" value="" maxlength="11" id="celular" placeholder="Digite o 11 antes do numero" required>
                         </div>
                     </div>
                     <div class="dadosPadronizados">
                         <div class="descricao"> Email*: </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtEmail" value="" maxlength="50">
+                            <input type="text" name="txtEmail" value="" maxlength="50" required>
                         </div>
                     </div>
                      <div class="dadosPadronizados">
@@ -59,19 +137,19 @@
                     <div class="dadosPadronizados">
                         <div class="descricao"> Endereço: </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtEndereco" value="" id="endereco" disabled>
+                            <input type="text" name="txtEndereco" value="" id="endereco" >
                         </div>
                     </div>
                      <div class="dadosPadronizados">
                         <div class="descricao"> Cidade: </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtNome" value=""  id="cidade" disabled>
+                            <input type="text" name="txtCidade" value=""  id="cidade" >
                         </div>
                     </div>
                      <div class="dadosPadronizados">
                         <div class="descricao"> Bairro: </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtNome" value=""  id="bairro" disabled>
+                            <input type="text" name="txtBairro" value=""  id="bairro" >
                         </div>
                     </div>
                     <div class="dadosPadronizados">
@@ -79,43 +157,43 @@
 
                         </div>
                         <div class="entradaDeDados"> 
-                            <input type="url" name="txtNome" value="" maxlength="50">
+                            <input type="url" name="txtHomePage" value="" maxlength="50">
                         </div>
                     </div>
                     <div class="dadosPadronizados">
                         <div class="descricao"> Link no Facebook: </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtNome" value="" maxlength="50">
+                            <input type="url" name="txtLinkFace" value="" maxlength="50">
                         </div>
                     </div>
                     <div class="dadosPadronizados">
                         <div class="descricao"> Filtro: </div>
                         <div class="entradaDeDados"> 
-                            <select>
+                            <select name="sltFiltro">
                                 <p> Filtro </p>
-                                <option> Sugestâo  </option>
-                                <option> Critica </option>
+                                <option value="S"> Sugestâo  </option>
+                                <option value="C"> Critica </option>
                             </select>
                         </div>
                     </div>
                     <div class="dadosPadronizados">
                         <div class="descricao"> Mensagem*: </div>
                         <div class="entradaDeDados"> 
-                            <textarea name="" cols="30" rows="7" maxlength="210"></textarea>
+                            <textarea name="txtMensagem" cols="30" rows="7" maxlength="210" required></textarea>
                         </div>
                     </div>
                     <div class="dadosPadronizados">
                         <div class="descricao"> Sexo: </div>
                         <div class="entradaDeDados"> 
-                            <input type="radio"  name="rdoGenero" value="feminino"> Feminino.
-                            <input type="radio" name="rdoGenero" value="masculino"> Masculino.
-                            <input type="radio" name="rdoGenero" value="outras"> Outros.
+                            <input type="radio"  name="rdoGenero" value="F"> Feminino.
+                            <input type="radio" name="rdoGenero" value="M"> Masculino.
+                            <input type="radio" name="rdoGenero" value="O"> Outros.
                         </div>
                     </div>
                     <div class="dadosPadronizados">
-                        <div class="descricao"> Profisão*: </div>
+                        <div class="descricao"> Profissão*: </div>
                         <div class="entradaDeDados"> 
-                            <input type="text" name="txtProfisao" value="" maxlength="50">
+                            <input type="text" name="txtProfissao" value="" maxlength="50" required>
                         </div>
                     </div>
                     <div class="dadosPadronizados">
