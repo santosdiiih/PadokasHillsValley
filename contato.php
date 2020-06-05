@@ -51,11 +51,7 @@
     };
     if(!($nome || $telefone || $celular || $email || $mensagem || $profissao ) == ""){
        # script para enviar as informações ao BD
-       
-
-       
-
-        
+           
 
        $sql = "insert into tblContato(nome, telefone, celular, email, cep, endereco, cidade, bairro, 
                 homePage, linkFacebook, filtro, mensagem, sexo, profissao) 
@@ -171,8 +167,8 @@
                         <div class="entradaDeDados"> 
                             <select name="sltFiltro">
                                 <p> Filtro </p>
-                                <option value="S"> Sugestâo  </option>
-                                <option value="C"> Critica </option>
+                                <option value="Sugestao"> Sugestâo  </option>
+                                <option value="Critica"> Critica </option>
                             </select>
                         </div>
                     </div>
