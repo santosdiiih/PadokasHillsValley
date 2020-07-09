@@ -1,4 +1,11 @@
+<?php 
+    include_once('BD/conecta.php');
 
+    $conex = conexaoMysql();
+
+    
+    # echo($sql); exit;   
+?>
 <!DOCTYPE>
 <html lang="pt-br">
     <head>
@@ -97,30 +104,29 @@
                     <div id="previous"> &laquo; </div>
                     <div id="next"> &raquo; </div>
                 </div>
+                <?php 
+                    $sql = "select  tblcuriosidade.idConteudo,tblcuriosidade.texto, tblcuriosidade.titulo, tblcuriosidade.estado 
+                    as estadoCuriosidade
+                    from tblcuriosidade where estado = 1";
+                
+                    $selectConteudo = mysqli_query($conex, $sql);
+                    
+                    while ($rsConteudo = mysqli_fetch_assoc($selectConteudo)) {
+
+                        ?>
+
                 <div id="conteudoValores" class="alinhamentoAoCentro"> 
-                    <h1> Valores </h1>
+                    <h1> <?=$rsConteudo['titulo']?> </h1>
                     <div class="texto">
                         <p> 
-                            O compromisso com nnossos clientes, a etica diante da sociedade, a inovação de nosso produtos e por fim a dedicação com tudo oque fazemos são nossos principais valores.
+                            <?=$rsConteudo['texto']?>
                         </p>
                     </div>
                 </div>
-                <div id="conteudoVisao" class="alinhamentoAoCentro"> 
-                    <h1> Visão </h1>
-                    <div class="texto"> 
-                        <p>
-                            Desejamos ser referencia e lider em performance, atraindo a confiança de nossos colaboradores da forma mais honesta possível, visando sempre o conforto dos nossos clientes. 
-                        </p>
-                    </div>
-                </div>
-                <div id="ConteudoMissao" class="alinhamentoAoCentro"> 
-                    <h1> Missão  </h1>
-                    <div class="texto"> 
-                        <p>
-                            A padokas é uma empresa que visa todos os gostos, com a inteção de promover momentos únicos na vida de seus colabores sendo eles seus clientes, funcionarios e patrocinadores.
-                        </p>
-                    </div>
-                </div>
+
+                <?php
+                    }
+                ?>
             </div>
                
            

@@ -1,31 +1,35 @@
-ul, li, body{
+ul,
+li,
+body {
     list-style: none;
     margin: 0;
     padding: 0;
 }
-body{
+
+body {
     background-size: 100% 100%;
     background-image: url(../imagens/background.jpg);
     background-repeat: no-repeat;
 }
-/* CLASSES PADROIZADAS */
-/*
 
-*/
-.alinhamentoAoCentro{
+
+/* CLASSES PADROIZADAS */
+
+.alinhamentoAoCentro {
     margin-left: auto;
     margin-right: auto;
 }
-.texto{
+
+.texto {
     font-family: arial;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
     box-sizing: border-box;
-
 }
-h1{
+
+h1 {
     padding-left: 50px;
     box-sizing: border-box;
     font-size: 3.5em;
@@ -33,52 +37,63 @@ h1{
     padding-top: 10px;
     box-sizing: border-box;
 }
-#sobreImagem img{
-    height: 100%;
+
+#sobreImagem img {
+    height: 90%;
     width: 100%;
     user-select: none;
 }
-#sobreImagemComoFoi img{
+
+#sobreImagemComoFoi img {
     width: 100%;
-    height: 100%;
+    height: 90%;
 }
-#sobreImagemAtualmente figure img{
+
+#sobreImagemAtualmente figure img {
     width: 100%;
-    height: 100%;
+    height: 90%;
     user-select: none;
 }
+
 .promocoesImagem img {
     width: 100%;
     height: 100%;
     border-radius: 20px;
 }
-#produtoComboImagem img{
+
+#produtoComboImagem img {
     width: 100%;
     height: 100%;
 }
+
 #produtoImagem img {
     width: 100%;
     height: 100%;
 }
-.produtoPromocaoImagem img{
+
+.produtoPromocaoImagem img {
     width: 100%;
     height: 100%;
 }
-.card{
+
+.card {
     background-color: bisque;
 }
-#formularioContato{
+
+#formularioContato {
     background-color: bisque;
 }
+
+
 /* Responsivo da Pagina para Desktop */
-@media screen and (min-device-width:1300px){
-    p{
+
+@media screen and (min-device-width:1300px) {
+    p {
         font-family: arial;
         font-size: 1.0em;
         line-height: 1.3;
-    
     }
-    #container{
+    #container {
         width: 1200px;
         min-height: 550px;
         height: auto;
@@ -87,7 +102,7 @@ h1{
         margin-bottom: 50px;
     }
     /* AREA DO HEADER */
-    #containerCabecalho{
+    #containerCabecalho {
         width: 100%;
         height: 90px;
         border: solid 1px black;
@@ -95,13 +110,13 @@ h1{
         position: fixed;
         z-index: 999;
         margin-bottom: 900px;
-        background-color: #604327;     
+        background-color: #604327;
     }
-    #conteudoCabecalho{
+    #conteudoCabecalho {
         width: 1200px;
-        height: inherit;    
+        height: inherit;
     }
-    #logo{
+    #logo {
         width: 110px;
         height: 60px;
         border: solid 1px black;
@@ -110,24 +125,23 @@ h1{
         background-image: url(../imagens/torradeira.png);
         background-repeat: no-repeat;
     }
-    
-    #menu{
+    #menu {
         width: auto;
         height: 100px;
         box-sizing: border-box;
         padding: 10px;
         float: left;
     }
-    #containerMenuMobile{
+    #containerMenuMobile {
         display: none;
     }
-    #menuLateralMobileImg{
+    #menuLateralMobileImg {
         display: none;
     }
-    #menuLateralMobile{
+    #menuLateralMobile {
         display: none;
     }
-    .itens{
+    .itens {
         width: 90px;
         height: 45px;
         float: left;
@@ -139,11 +153,11 @@ h1{
         box-sizing: border-box;
         background-color: #604327;
     }
-    .itens a{
+    .itens a {
         color: CACACA;
         text-decoration: none;
     }
-    .itens:hover{
+    .itens:hover {
         font-size: 1.5em;
         height: 55px;
         transition: 0.5s;
@@ -152,21 +166,22 @@ h1{
         box-sizing: border-box;
         pointer-events: painted;
     }
-    #login{
+    #login {
         width: 300px;
         height: 70px;
         float: right;
         margin-right: 140px;
         float: left;
     }
-    #nome, #senha{
+    #nome,
+    #senha {
         width: 100px;
         height: 50px;
         float: left;
         margin-left: 20px;
         color: cacaca;
     }
-    #formulario{
+    #formulario {
         width: 300px;
         height: 70px;
         float: left;
@@ -179,17 +194,15 @@ h1{
         width: 100px;
         height: 25px;
     }
-    #botao{
+    #botao {
         width: 50px;
         height: 25px;
-        margin-top: 37px; 
+        margin-top: 37px;
         float: left;
         margin-right: 5px;
     }
-    
-    
     /* MENU LATERAL */
-    #menuLateral{
+    #menuLateral {
         width: 150px;
         min-height: 300px;
         height: auto;
@@ -198,7 +211,7 @@ h1{
         background-color: #604327;
         color: CACACA;
     }
-    .subItens{
+    .subItens {
         width: inherit;
         height: 50px;
         border: solid 1px black;
@@ -206,33 +219,31 @@ h1{
         padding-top: 10px;
         box-sizing: border-box;
         font-size: 1.2em;
-
     }
-    .subItens:hover{
+    .subItens:hover {
         font-size: 1.5em;
     }
     /* AREA DO CONTEUDO */
-    .conteudo{
+    .conteudo {
         width: inherit;
         min-height: 1000px;
         height: auto;
         border: solid 1px black;
         overflow: hidden;
         padding-bottom: 110px;
-        background-color: rgba(255, 228, 196,0.5);
+        background-color: rgba(255, 228, 196, 0.5);
         padding-top: 100px;
     }
-    #containerConteudo{
+    #containerConteudo {
         width: 1045px;
         min-height: 300px;
         height: auto;
         float: left;
         box-sizing: border-box;
-        padding-top: 50px;    
+        padding-top: 50px;
     }
-
     /* AREA DOS CARDS */
-    .card{
+    .card {
         width: 300px;
         height: 300px;
         border: solid 1px black;
@@ -242,7 +253,7 @@ h1{
         box-sizing: border-box;
         padding-top: 10px;
     }
-    #imagemCard{
+    #imagemCard {
         width: 100px;
         height: 100px;
         margin-left: auto;
@@ -250,13 +261,13 @@ h1{
         border: solid 1px black;
         margin-bottom: 10px;
     }
-    #informacoesCard{
+    #informacoesCard {
         width: 250px;
         height: 110px;
         margin-left: auto;
         margin-right: auto;
     }
-    #detalhesCard{
+    #detalhesCard {
         width: 80px;
         height: 30px;
         border: solid 1px black;
@@ -265,18 +276,18 @@ h1{
         text-align: center;
     }
     /* AREA DO RODAPE */
-    footer{
+    footer {
         width: 1200px;
         height: 100px;
         border: solid 1px black;
         box-sizing: border-box;
         position: fixed;
         z-index: 998;
-        background-color: #604327;   
+        background-color: #604327;
         bottom: 0px;
         color: CACACA;
     }
-    #sistemaInternoFooter{
+    #sistemaInternoFooter {
         width: 100px;
         height: 50px;
         margin-top: 20px;
@@ -284,7 +295,7 @@ h1{
         border: solid 1px black;
         float: left;
     }
-    #enderecoFooter{
+    #enderecoFooter {
         width: 500px;
         height: 50px;
         float: left;
@@ -293,7 +304,7 @@ h1{
         box-sizing: border-box;
         padding-top: 20px;
     }
-    #aplicativoFooter{
+    #aplicativoFooter {
         width: 250px;
         height: 70px;
         margin-left: 900px;
@@ -301,7 +312,7 @@ h1{
         box-sizing: border-box;
         padding-top: 10px;
     }
-    #imagemFooter{
+    #imagemFooter {
         width: 50px;
         height: inherit;
         border: solid 1px black;
@@ -310,7 +321,7 @@ h1{
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
-    #linkFooter{
+    #linkFooter {
         width: 100px;
         height: 60px;
         border: solid 1px black;
@@ -319,64 +330,66 @@ h1{
         text-align: center;
     }
     /* AREA DAS REDES SOCIAIS */
-    #containerSociais{
+    #containerSociais {
         width: 70px;
         height: auto;
         float: left;
         margin-left: 10px;
         position: fixed;
         margin-left: 1300px;
-        margin-top: 350px;    
+        margin-top: 350px;
     }
-    .face{
+    .face {
         background-image: url(../imagens/face.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
-    .whats{
+    .whats {
         background-image: url(../imagens/whats.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
-    .insta{
+    .insta {
         background-image: url(../imagens/insta.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
-    .social{
+    .social {
         width: inherit;
         height: 70px;
-
     }
-    
-    #conteudoValores, #conteudoVisao, #ConteudoMissao{
+    #conteudoValores,
+    #conteudoVisao,
+    #ConteudoMissao {
         width: 80%;
         height: 250px;
         border: solid 1px black;
         border-radius: 25px;
         background-color: rgb(255, 228, 196);
-
         margin-bottom: 10px;
     }
-    #conteudoValores, #conteudoVisao, #ConteudoMissao, h1{
+    #conteudoValores,
+    #conteudoVisao,
+    #ConteudoMissao,
+    h1 {
         padding-left: 30px;
         box-sizing: border-box;
     }
-    .conteudoSobre{
+    .conteudoSobre {
         width: 80%;
         height: 250px;
         user-select: none;
         margin-top: 100px;
-        background-color:  rgb(255, 228, 196);
+        background-color: rgb(255, 228, 196);
         box-shadow: 20px 10px 30px black;
         border-radius: 20px;
     }
-    #sobreImagem, #sobreImagemComoFoi{
+    #sobreImagem,
+    #sobreImagemComoFoi {
         width: 30%;
         height: inherit;
         float: left;
     }
-    
     #sobreImagem img:hover {
         width: 300px;
         height: 300px;
@@ -385,13 +398,12 @@ h1{
         z-index: 766;
         border-radius: 40px;
     }
-    #sobreInicio, #sobreComoFoi{
+    #sobreInicio,
+    #sobreComoFoi {
         width: 70%;
         height: inherit;
         float: left;
-
     }
-    
     #sobreImagemComoFoi img:hover {
         width: 300px;
         height: 300px;
@@ -400,161 +412,156 @@ h1{
         align-content: center;
         z-index: 766;
     }
-    #sobreAtualmente, #sobreInformacoesAdicionais{
+    #sobreAtualmente,
+    #sobreInformacoesAdicionais {
         width: 30%;
         height: inherit;
         float: left;
         padding: 10px;
         box-sizing: border-box;
     }
-    #sobreImagemAtualmente img:hover{
+    #sobreImagemAtualmente img:hover {
         width: 400px;
         height: 400px;
         align-content: center;
         border-radius: 40px;
-        
     }
-    #sobreImagemAtualmente{
+    #sobreImagemAtualmente {
         width: 40%;
         height: inherit;
         float: left;
     }
-    #containerCombos{
+    #containerCombos {
         width: 80%;
         height: 400px;
         padding-bottom: 10px;
     }
-    #produtoInformacao{
+    #produtoInformacao {
         width: 70%;
         height: inherit;
         float: left;
     }
-    .produtoCombos{
+    .produtoCombos {
         width: 100%;
         height: 200px;
         float: left;
         margin-bottom: 10px;
     }
-    #produtoComboImagem{
+    #produtoComboImagem {
         width: 60%;
         height: inherit;
         float: left;
     }
-    #produtoComboTexto{
+    .produtoComboTexto {
         width: 40%;
         height: inherit;
         float: left;
         background-color: bisque;
-
+        border-radius: 20px;
     }
-    #produtoImagem{
+    #produtoImagem {
         width: 30%;
         height: 400px;
         float: left;
     }
-    #containerProdutoPromocao{
+    #containerProdutoPromocao {
         width: 80%;
         height: 400px;
         margin-bottom: 10px;
-        padding 20px;
+        padding: 20px;
         box-sizing: border-box;
     }
-    #containerProdutoPromocao h1{
+    #containerProdutoPromocao h1 {
         padding: 60px;
         box-sizing: border-box;
         padding-bottom: 0px;
     }
-    .produtoPromocaoCombo{
+    .produtoPromocaoCombo {
         width: 50%;
         height: inherit;
         float: left;
     }
-    .produtoPromocaoImagem{
+    .produtoPromocaoImagem {
         width: 90%;
         height: 200px;
     }
-    .produtoPromocaoTexto{
+    .produtoPromocaoTexto {
         width: 90%;
         height: 200px;
         margin-top: 10px;
         padding: 10px;
         box-sizing: border-box;
         background-color: bisque;
+        border-radius: 20px;
     }
-    .containerPromocoes{
+    .containerPromocoes {
         width: 80%;
         height: 200px;
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 10px;
         margin-top: 50px;
-        background-color:  rgb(255, 228, 196);
+        background-color: rgb(255, 228, 196);
         border-radius: 30px;
-
     }
-    .promocoesTexto{
+    .promocoesTexto {
         width: 35%;
         height: inherit;
         margin-bottom: 10px;
         float: left;
         box-sizing: border-box;
-
     }
-    .promocaoTexto, h1{
+    .promocaoTexto,
+    h1 {
         font-size: 2.2em;
         padding-left: 0px;
     }
-
-    .promocoesImagem{
+    .promocoesImagem {
         width: 20%;
         height: 100%;
         float: left;
         background-color: black;
         margin-left: 15px;
         border-radius: 20px;
-
     }
-    
-    #lojas{
+    #lojas {
         width: 70%;
         height: 1000px;
         height: auto;
-
-
     }
-    #lojas h1{
+    #lojas h1 {
         font-size: 2.2em;
         text-align: center;
     }
-    #imgLojas{
+    #imgLojas {
         width: 100%;
         height: 100%;
-        background-color: black;
-        background-image: url(../imagens/enderecos.jpeg);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
+    }
+    #imgLojas img {
+        width: inherit;
+        height: inherit;
     }
     /* AREA DO FORMULARIO */
-    #formularioContato{
+    #formularioContato {
         width: 550px;
         min-height: 100px;
         height: auto;
         border: solid 1px black;
         border-radius: 60px;
-        margin-top: 50px;   
+        margin-top: 50px;
     }
-    #formularioContato h1{
-       text-align: center;
+    #formularioContato h1 {
+        text-align: center;
         font-size: 2.4em;
     }
-    .dadosPadronizados{
+    .dadosPadronizados {
         width: inherit;
         min-height: 60px;
         height: auto;
         margin-left: 100px;
         font-family: arial;
     }
-    .descricao{
+    .descricao {
         float: left;
         width: 100px;
         height: 55px;
@@ -566,7 +573,7 @@ h1{
         color: cacaca;
         font-size: 1.2em;
     }
-    textarea{
+    textarea {
         resize: none;
     }
     .entradaDeDados input {
@@ -581,35 +588,35 @@ h1{
     }
 }
 
+
 /* Responsivo da pagina para dispositivos Mobile */
-@media screen and (max-device-width:780px){
-    p{
+
+@media screen and (max-device-width:780px) {
+    p {
         font-family: arial;
         font-size: 1.7em;
         line-height: 1.3;
-    
-}
-    #container{
+    }
+    #container {
         width: 80%;
         height: auto;
-        
     }
     /* AREA DO HEADER */
-    #containerCabecalho{
+    #containerCabecalho {
         width: 100%;
         height: 90px;
         border: solid 1px black;
         position: fixed;
         z-index: 999;
         margin-bottom: 90px;
-        background-color: #604327;     
+        background-color: #604327;
     }
-    #conteudoCabecalho{
+    #conteudoCabecalho {
         width: 100%;
         height: auto;
         position: fixed;
     }
-    #menuLateralMobileImg{
+    #menuLateralMobileImg {
         width: 80%;
         height: 50px;
         display: flex;
@@ -617,45 +624,41 @@ h1{
         align-items: center;
         justify-content: center;
     }
-    #menuLateralMobile{
+    #menuLateralMobile {
         width: 80%;
         height: auto;
         min-height: 45px;
-        background-color: rgba(38, 26, 15,0.7);
+        background-color: rgba(38, 26, 15, 0.7);
         position: absolute;
         z-index: 999;
         display: none;
         color: white;
     }
-    .subItensMobile{
+    .subItensMobile {
         width: 100%;
         min-height: 45px;
-        
         height: auto;
         color: white;
         text-align: center;
         margin-top: 18px;
-
         padding-top: 8px;
         box-sizing: border-box;
         font-size: 2.2em;
-    
     }
-    #menuMobile{
+    #menuMobile {
         width: 100%;
         height: auto;
-        background-color: rgba(38, 26, 15,0.5);
+        background-color: rgba(38, 26, 15, 0.5);
         position: absolute;
         z-index: 999;
         display: none;
         margin-top: 80px;
         color: black;
-        
     }
-    #menuMobileIcone{
+    #menuMobileIcone {
         width: 70px;
         height: 70px;
-/*        border: solid 1px black;*/
+        /*        border: solid 1px black;*/
         float: left;
         margin: 10px;
         background-image: url(../imagens/menu.png);
@@ -666,10 +669,10 @@ h1{
         margin-top: 0px;
         padding-top: 0px;
     }
-    #logo{
+    #logo {
         width: 110px;
         height: 60px;
-/*        border: solid 1px black;*/
+        /*        border: solid 1px black;*/
         float: left;
         margin: 20px;
         background-image: url(../imagens/torradeira.png);
@@ -677,49 +680,44 @@ h1{
         margin-left: 300px;
         margin-right: 300px;
     }
-    #menu{
+    #menu {
         display: none;
     }
-    .itens{
+    .itens {
         width: 90%;
         min-height: 45px;
-        
         height: auto;
         color: black;
         text-align: center;
         margin-top: 18px;
-/*        margin-left: 10px;*/
-/*        margin-right: auto;*/
+        /*        margin-left: 10px;*/
+        /*        margin-right: auto;*/
         padding-top: 8px;
         box-sizing: border-box;
         font-size: 2.2em;
-
     }
-    .itens a{
+    .itens a {
         color: white;
         text-decoration: none;
     }
-
-    #login{
-       display: none;
-    }
-    
-    #formulario{
+    #login {
         display: none;
     }
-    
-    
+    #formulario {
+        display: none;
+    }
     /* AREA DO SLIDE */
-    #slideHome, #slideHome figure, #previous, #next{
+    #slideHome,
+    #slideHome figure,
+    #previous,
+    #next {
         display: none;
     }
-    
     /* MENU LATERAL */
-    #menuLateral{
+    #menuLateral {
         display: none;
-        
     }
-    .subItens{
+    .subItens {
         width: inherit;
         height: 50px;
         border: solid 1px black;
@@ -727,32 +725,30 @@ h1{
         padding-top: 10px;
         box-sizing: border-box;
         font-size: 1.2em;
-
     }
-    .subItens:hover{
+    .subItens:hover {
         font-size: 1.5em;
     }
     /* AREA DO CONTEUDO */
-    .conteudo{
+    .conteudo {
         width: 100%;
         height: auto;
         border: solid 1px black;
         padding-bottom: 110px;
-        background-color: rgba(255, 228, 196,0.5);
+        background-color: rgba(255, 228, 196, 0.5);
         padding-top: 100px;
         float: left;
     }
-    #containerConteudo{
+    #containerConteudo {
         width: 100%;
         min-height: 100px;
         height: auto;
         float: left;
         box-sizing: border-box;
-        padding-top: 50px;    
+        padding-top: 50px;
     }
-
     /* AREA DOS CARDS */
-    .card{
+    .card {
         width: 50%;
         height: 400px;
         border: solid 1px black;
@@ -762,7 +758,7 @@ h1{
         box-sizing: border-box;
         padding-top: 10px;
     }
-    #imagemCard{
+    #imagemCard {
         width: 200px;
         height: 200px;
         margin-left: auto;
@@ -770,13 +766,13 @@ h1{
         border: solid 1px black;
         margin-bottom: 10px;
     }
-    #informacoesCard{
+    #informacoesCard {
         width: 250px;
         height: 110px;
         margin-left: auto;
         margin-right: auto;
     }
-    #detalhesCard{
+    #detalhesCard {
         width: 80px;
         height: 30px;
         border: solid 1px black;
@@ -785,18 +781,18 @@ h1{
         text-align: center;
     }
     /* AREA DO RODAPE */
-    footer{
+    footer {
         width: 80%;
         height: 100px;
         position: fixed;
-        background-color: #604327;   
+        background-color: #604327;
         bottom: 0px;
         color: CACACA;
     }
-    #sistemaInternoFooter{
+    #sistemaInternoFooter {
         display: none;
     }
-    #enderecoFooter{
+    #enderecoFooter {
         width: 65%;
         height: 50px;
         float: left;
@@ -804,20 +800,18 @@ h1{
         font-size: 2.2em;
         text-align: center;
         box-sizing: border-box;
-
     }
-    #aplicativoFooter{
+    #aplicativoFooter {
         display: none;
     }
-    #imagemFooter{
+    #imagemFooter {
         display: none;
     }
-    #linkFooter{
+    #linkFooter {
         display: none
     }
-    
     /* AREA DAS REDES SOCIAIS */
-    #containerSociais{
+    #containerSociais {
         width: 30px;
         height: 30px;
         float: left;
@@ -825,31 +819,32 @@ h1{
         bottom: 65px;
         margin-left: 80%;
         z-index: 988;
-
     }
-    .face{
+    .face {
         background-image: url(../imagens/face.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
-    .whats{
+    .whats {
         background-image: url(../imagens/whats.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
-    .insta{
+    .insta {
         background-image: url(../imagens/insta.png);
         background-repeat: no-repeat;
         background-size: 100% 100%;
     }
-    .social{
+    .social {
         width: inherit;
         height: 30px;
     }
-    #slideCurioidade{
+    #slideCurioidade {
         display: none;
     }
-    #conteudoValores, #conteudoVisao, #ConteudoMissao{
+    #conteudoValores,
+    #conteudoVisao,
+    #ConteudoMissao {
         width: 80%;
         height: auto;
         border: solid 1px black;
@@ -857,51 +852,58 @@ h1{
         background-color: bisque;
         border-radius: 30px;
     }
-    #conteudoValores, #conteudoVisao, #ConteudoMissao, h1{
+    #conteudoValores,
+    #conteudoVisao,
+    #ConteudoMissao,
+    h1 {
         padding-left: 30px;
         box-sizing: border-box;
     }
-    .conteudoSobre{
+    .conteudoSobre {
         width: 90%;
         height: auto;
         margin-top: 10px;
         background-color: bisque;
         border-radius: 30px;
     }
-    #sobreImagem figure, #sobreImagemComoFoi figure, #sobreImagemAtualmente{
+    #sobreImagem figure,
+    #sobreImagemComoFoi figure,
+    #sobreImagemAtualmente {
         width: 400px;
-        height: 400px;
+        height: 500px;
         border-radius: 40px;
         margin-left: auto;
         margin-right: auto;
     }
-    #sobreInicio, #sobreComoFoi{
+    #sobreInicio,
+    #sobreComoFoi {
         width: 90%;
         height: auto;
-
     }
-    #sobreAtualmente, #sobreInformacoesAdicionais{
+    #sobreAtualmente,
+    #sobreInformacoesAdicionais {
         width: 90%;
         height: auto;
         box-sizing: border-box;
         background-color: bisque;
         border-radius: 30px;
     }
-    #sobreImagemAtualmente{
+    #sobreImagemAtualmente {
         width: 400px;
         height: 400px;
         border-radius: 40px;
     }
-    #containerCombos, #containerProdutoPromocao{
+    #containerCombos,
+    #containerProdutoPromocao {
         width: 90%;
         height: auto;
         padding-bottom: 10px;
     }
-    #produtoInformacao{
+    #produtoInformacao {
         width: 90%;
         height: auto;
     }
-    .produtoCombos{
+    .produtoCombos {
         width: 100%;
         height: auto;
         margin-bottom: 10px;
@@ -911,26 +913,26 @@ h1{
         height: 550px;
         background-color: black;
     }
-    #produtoImagem{
+    #produtoImagem {
         width: 550px;
         height: 550px;
-        
     }
-    #containerProdutoPromocao h1{
+    #containerProdutoPromocao h1 {
         padding-top: 500px;
         padding: 60px;
         box-sizing: border-box;
         padding-bottom: 0px;
     }
-    .produtoPromocaoCombo{
+    .produtoPromocaoCombo {
         width: 90%;
         height: inherit;
     }
-    .produtoPromocaoImagem{
+    .produtoPromocaoImagem {
         width: 550px;
         height: 550px;
     }
-    .produtoPromocaoTexto, .produtoComboTexto {
+    .produtoPromocaoTexto,
+    .produtoComboTexto {
         width: 100%;
         height: auto;
         margin-top: 10px;
@@ -940,41 +942,40 @@ h1{
         background-color: bisque;
         border-radius: 30px;
     }
-    .containerPromocoes{
+    .containerPromocoes {
         width: 100%;
         height: auto;
-       padding: 10px;
+        padding: 10px;
         box-sizing: border-box;
         margin-bottom: 20px;
         margin-top: 10px;
-        
     }
-    .promocoesTexto{
+    .promocoesTexto {
         width: 100%;
         height: auto;
-/*        margin-bottom: 50px;*/
+        /*        margin-bottom: 50px;*/
         box-sizing: border-box;
         background-color: bisque;
         border-radius: 30px;
     }
-    .promocaoTexto, h1{
+    .promocaoTexto,
+    h1 {
         margin-left: auto;
         margin-right: auto;
     }
-    .promocoesImagem{
+    .promocoesImagem {
         width: 240px;
         height: 170px;
         float: left;
         margin-left: 10px;
-/*        margin-bottom: 150px;*/
+        /*        margin-bottom: 150px;*/
         border-radius: 40px;
-        
     }
-    #lojas{
+    #lojas {
         width: 90%;
         height: auto;
     }
-    #imgLojas{
+    #imgLojas {
         width: 700px;
         height: 700px;
         background-color: black;
@@ -983,7 +984,7 @@ h1{
         background-size: 100% 100%;
     }
     /* AREA DO FORMULARIO */
-    #formularioContato{
+    #formularioContato {
         width: 90%;
         min-height: 100px;
         height: auto;
@@ -992,11 +993,11 @@ h1{
         margin-top: 50px;
         font-size: 1.2em;
     }
-    #formularioContato h1{
-       text-align: center;
+    #formularioContato h1 {
+        text-align: center;
         font-size: 2.2em;
     }
-    .dadosPadronizados{
+    .dadosPadronizados {
         width: inherit;
         min-height: 75px;
         height: auto;
@@ -1004,7 +1005,7 @@ h1{
         font-family: arial;
         margin-bottom: 10px;
     }
-    .descricao{
+    .descricao {
         float: left;
         width: 155px;
         height: 75px;
@@ -1016,7 +1017,7 @@ h1{
         color: cacaca;
         font-size: 1.4em;
     }
-    textarea{
+    textarea {
         resize: none;
     }
     .entradaDeDados input {
@@ -1030,21 +1031,3 @@ h1{
         float: left;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -38,11 +38,11 @@
        $profissao = $_POST['txtProfissao'];
        
 
-        $sql = "select idContato from tblContato";
+       # $sql = "select idContato from tblContato";
 
-        $tblContato = mysqli_query($conex,$sql);
+       # $tblContato = mysqli_query($conex,$sql);
 
-        $idContato = mysqli_fetch_assoc($tblContato);
+       # $idContato = mysqli_fetch_assoc($tblContato);
       
         
         
@@ -70,10 +70,10 @@
         }   
         
     }
-    else{
+    #else{
         #mensagem de erro para que o usuario verifique os campos vazios
-        echo ("<script> alert('verifique os campos vazios ') </script>");
-    }
+     #   echo ("<script> alert('verifique os campos vazios ') </script>");
+    # }
 ?>
 
 <!DOCTYPE>

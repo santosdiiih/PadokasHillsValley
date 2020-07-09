@@ -1,3 +1,24 @@
+<?php
+    $nome = null;
+    $senha = null;
+    if(isset($_POST['btnEnviar'])){
+        include_once('BD/conecta.php');
+
+        $conex = conexaoMysql();
+
+        $nome = $_POST['txtNome'];
+        $senha = $_POST['txtSenha'];
+
+        $senha = md5($senha);
+
+        $sql = "select * from tblUsuario where nome = '".$nome."' 
+        and senha = '".$senha."' 
+        and estado = 1" ;
+        echo($sql);
+
+    }
+?>
+
 <div id="containerCabecalho" class="alinhamentoAoCentro"> 
     <div id="conteudoCabecalho" class="alinhamentoAoCentro">
         <div id="containerMenuMobile">
@@ -86,20 +107,20 @@
                 </div>              
             </div>
             <div id="formulario">
-                <form>
+                <form action="header.php" method="post" name="frmEnviar">
                     <div id="login">
                         <div id="nome">
                             <p> Nome: 
-                                <input type="text" name="nome" value="" maxlength="50">
+                                <input type="text" name="txtNome" value="" maxlength="50">
                             </p>
                         </div>
                         <div id="senha">
                             <p> Senha: 
-                                <input type="password" name="senha" value="" maxlength="25">
+                                <input type="password" name="txtSenha" value="" maxlength="25">
                             </p>
                         </div>
                         <div id="botao">
-                            <input type="submit" name="btn-enviar" value="Ok">
+                            <input type="submit" name="btnEnviar" value="Ok">
                         </div>
                     </div>                        
             </form>

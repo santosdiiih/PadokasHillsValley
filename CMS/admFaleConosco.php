@@ -1,7 +1,7 @@
 <?php
     include_once('BD/conecta.php');
 
-    include_once('filtrar.php');
+    
 
     $conex = conexaoMysql();
 
@@ -16,48 +16,41 @@
         <title> CMS - Padokas </title>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="scripts/jquery.js"></script>
+        <script>
+             $(document).ready(function(){
+               $('.visualizar').click(function(){
+                    $('#modal').fadeIn(1000);
+               });
+            });
+            function visualizarContato(idContato){
+                $.ajax({
+                    type: 'POST',
+                    url: 'BD/visualizarContato.php',
+                    data: {modo: 'visualizar', id: idContato},
+                    success: function (dados) {
+                        $('#modalConteudo').html(dados);
+                    }
+                    
+                });
+            }
+        </script>
         
     </head>
     <body>
+    <div id="modal">
+        <div id="modalConteudo"></div>
+    </div>
         <div class="container">
-            <div class="cabecalho">
-                <div class="titulo">
-                    <p> CMS - Sistema de Gerenciamento do Site </p>
-                </div>
-                <div class="configuracaoImg">
-                    <img src="img/settings.jpg"> 
-                </div>
-            </div>
-            <div class="menu">
-                <div class="admConteudo">
-                    <img src="img/admConteudo.png">
-                   <a href="admConteudo.php">
-                        <p> Admin - Conteúdo </p>
-                   </a>
-                </div>
-                <div class="contato">
-                    <img src="img/contact.png">
-                    <a href="admFaleConosco.php">
-                        <p> Admin - Fale Conosco  </p>
-                    </a>
-                </div>
-                <div class="admUser">
-                    <img src="img/user.png">
-                   <a href="admUsuario.php">
-                     <p> Admin - Usuarios </p>
-                   </a>
-                </div>
-                <div class="userLog">
-                    <p> Bem vindo: </p> [Ingrid Aparecida]
-                    <p class="logOut">Logout</p>
-                </div>
-            </div>
+            <?php 
+                include_once('header.php');
+            ?>
             <div class="conteudo">
+                
                 <table id="tblFaleConosco">
                     <tr class="tblLinhaTituloFaleConosco">
-                        <td id="tituloFaleConosco" colspan="6"> Consulta de Dados </td>
-                        <td class="tblColunasfaleConosco"> 
-                             </td>
+                        <td id="tituloFaleConosco" colspan="9"> Consulta de Dados </td>
+                        
                     </tr>
                     <tr class="tblLinhasFaleConosco">
                         <td class="tblColunasfaleConosco"> Nome </td>
@@ -77,6 +70,8 @@
                                 
                             </form>   
                         </td>
+                        <td class="tblColunasfaleConosco"> Excluir </td>
+                        <td class="tblColunasfaleConosco"> visualizar </td>
                     </tr>
 
                     <?php
@@ -111,6 +106,20 @@
                         <td class="tblColunasfaleConosco"><?=$rsContato['sexo']?></td>
                         <td class="tblColunasfaleConosco"><?=$rsContato['profissao']?></td>
                         <td class="tblColunasfaleConosco"><?=$rsContato['filtro']?></td>
+                        <td class="tblColunasfaleConosco"> 
+                            <div class="imagens">
+                                <a onclick="return confirm('Deseja realmente excluir esse Registro?')" href="BD/deleteFaleConosco.php?modo=excluir&id=<?=$rsContato['idContato']?>">
+                                    <div class="excluir"></div>
+                                </a>                                
+                            </div>
+                        </td>
+                        <td class="tblColunasfaleConosco"> 
+                            <div class="imagens">
+                                <a>
+                                    <div class="visualizar" onclick="visualizarContato(<?=$rsContato['idContato']?>)"></div>
+                                </a>                                
+                            </div>
+                        </td>
                     </tr>
                     <?php 
                         }

@@ -1,3 +1,7 @@
+<?php 
+    include_once('BD/conecta.php');
+    $conex = conexaoMysql();
+?>
 <!DOCTYPE>
 <html lang="pt-br">
     <head>
@@ -12,17 +16,27 @@
         ?>
         <div id="container" class="alinhamentoAoCentro">
              <!-- Area do cabecalho -->
-            <div>
-               
-            </div>
+            
                         
             <div class="conteudo">
+
+            <?php 
+                $sql = "select * from tblLoja where estado = 1";
+                #echo($sql); exit;
+                
+                $selectConteudo = mysqli_query($conex,$sql);
+                while ($rsConteudo = mysqli_fetch_assoc($selectConteudo)) {
+                    ?>
                 <div id="lojas" class="alinhamentoAocentro texto">
-                    <h1> Lojas </h1>
+                    <h1> <?=$rsConteudo['titulo']?> </h1>
                     <div id="imgLojas">
+                        <img src="BD/arquivo/<?=$rsConteudo['imagem']?>">
                     </div>
                    
                 </div>
+                <?php
+                }
+                ?>
 
             </div>
                 
