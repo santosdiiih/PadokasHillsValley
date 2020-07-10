@@ -30,7 +30,7 @@
                 <div id="lojas" class="alinhamentoAocentro texto">
                     <h1> <?=$rsConteudo['titulo']?> </h1>
                     <div id="imgLojas">
-                        <img src="BD/arquivo/<?=$rsConteudo['imagem']?>">
+                        <img src="../CMS/BD/arquivo/<?=$rsConteudo['imagem']?>">
                     </div>
                    
                 </div>

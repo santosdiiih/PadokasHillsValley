@@ -100,7 +100,7 @@
                 <div class="tblLoja">
                     <table>
                         <tr>
-                            <td class="titleLoja" colspan="4">
+                            <td class="titleLoja" colspan="5">
                                 Visualizar Conteudo
                             </td>
                         </tr>
@@ -109,6 +109,7 @@
                             <td> Imagem </td>
                             <td> Estado </td>
                             <td> Editar </td>
+                            <td> Excluir </td>
                         </tr>
                         <?php 
                             $sql = "select * from tblloja";
@@ -139,6 +140,11 @@
                             <td class="editar">
                                 <a href="loja.php?modo=consultaEditar&id=<?=$rsLoja['idLoja']?>">
                                     <img src="img/edit.jpg">
+                                </a>
+                            </td>
+                            <td>
+                                <a onclick="return confirm('Deseja mesmo Excluir Usuario ?')" href="BD/deletarLoja.php?modo=excluir&id=<?=$rsLoja['idLoja']?>"> 
+                                    <div class="excluir"></div>
                                 </a>
                             </td>
                         </tr>

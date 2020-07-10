@@ -86,7 +86,7 @@
             <div class="visualizarConteudoCuriosidade">
                 <table>
                     <tr>
-                        <td colspan="4" class="titleCuriosidade"> 
+                        <td colspan="5" class="titleCuriosidade"> 
                             Visualizar Conteudo 
                         </td>
                     </tr>
@@ -96,6 +96,7 @@
                         <td> Conteudo </td>
                         <td> Ativar/Desativar </td>
                         <td> Editar </td>
+                        <td> Excluir </td>
                     </tr>
                     <?php 
                         $sql = "SELECT * FROM dbpadokas.tblcuriosidade";
@@ -130,7 +131,11 @@
                                 <img src="img/edit.jpg" >
                             </a>
                         </td>
-                        
+                        <td>
+                            <a onclick="return confirm('Deseja Mesmo Excluir Conteudo?')" href="BD/deleteCuriosidade.php?modo=excluir&id=<?=($rsCuriosidade['idConteudo'])?>">
+                                    <div class="excluir"></div>
+                            </a>
+                        </td>
                         
                     </tr>
                     <?php

@@ -1,7 +1,9 @@
 <?php 
 
+    
     if (isset($_GET['modo'])) {
         if ($_GET['modo'] == 'atualizar') {
+
             include_once('conecta.php');
 
             $conex = conexaoMysql();
@@ -12,22 +14,24 @@
             $texto = $_POST['txtConteudo'];
             $foto = $_SESSION['nomeFoto'];
 
-            $sql = "update set tblsobreconteudo 
+            $sql = "update tblsobreconteudo set
             texto = '".$texto."',
-            titulo = '".$titulo."'
+            titulo = '".$titulo."',
             imagem = '".$foto."'
             where idConteudo = ".$id;
+
+            #echo($sql); exit;
 
             if (mysqli_query($conex, $sql)) {
                 echo("
                 <script> 
                     alert('registro inserido com sucesso'); 
-                    location.href = '../loja.php';
+                    location.href = '../sobre.php';
                 </script>");
             } else {
                 echo("<script> 
                 alert('erro ao salvar '); 
-                location.href = '../loja.php';
+                location.href = '../sobre.php';
                 window.history.back();
                 </script>");
             }

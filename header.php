@@ -12,9 +12,31 @@
         $senha = md5($senha);
 
         $sql = "select * from tblUsuario where nome = '".$nome."' 
-        and senha = '".$senha."' 
-        and estado = 1" ;
-        echo($sql);
+            and senha = '".$senha."' 
+            and estado = 1" ;
+
+        $selectDados = mysqli_query($conex, $sql);
+        $list = mysqli_fetch_assoc($selectDados);
+
+        # echo($sql); exit;    
+        if($list != null){
+                header('location: ../CMS/index.php');
+
+                echo($sql); exit;
+            }
+        else {
+            
+            echo('<script> 
+                    alert("Usuario nâo encontrado ");
+                    location.href = "index.php";    
+                </script>');
+            
+            
+        }
+
+        session_start();
+        $_SESSION['nomeUsuario'] = $user;
+        echo($user);
 
     }
 ?>

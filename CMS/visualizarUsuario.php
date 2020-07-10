@@ -46,7 +46,7 @@
                     <div class="tblVisualizarUsuarios">
                             <table>
                                 <tr> 
-                                    <td colspan="7" class="tituloUsuario"> Visualizar Usuarios </td>
+                                    <td colspan="8" class="tituloUsuario"> Visualizar Usuarios </td>
                                 </tr>
                                 <tr>
                                     <td> Nome: </td>
@@ -66,6 +66,7 @@
                                 
                                         </form>   
                                     </td>
+                                    <td> Excluir </td>
                                 </tr>
                                 <?php 
 
@@ -108,7 +109,7 @@
                                            
                                     </td>
                                     <td class="desativarUser"> 
-                                        <a onclick="return confirm('Deseja mesmo Desativar esse Usuario?')" href="BD/deleteUsuario.php?modo=desativar&id=<?=($rsUsuario['idUsuario'])?>&estado=<?=($rsUsuario['estado'])?>" >
+                                        <a onclick="return confirm('Deseja mesmo Desativar esse Usuario?')" href="BD/desativarUsuario.php?modo=desativar&id=<?=($rsUsuario['idUsuario'])?>&estado=<?=($rsUsuario['estado'])?>" >
                                             <?php if($rsUsuario['estado'] == '1'){
                                                 $img = "img/activate.jpg";
                                             }
@@ -129,6 +130,11 @@
                                                 echo("Desativado");
                                             }
                                         ?>
+                                    </td>
+                                    <td>
+                                        <a onclick="return confirm('Deseja Mesmo Excluir esse Usuario?')" href="BD/excluirUsuario.php?modo=excluir&id=<?=($rsUsuario['idUsuario'])?>">
+                                            <div class="excluir"></div>
+                                        </a>
                                     </td>
                                 </tr>
                                 <?php

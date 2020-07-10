@@ -8,34 +8,33 @@
         $admConteudo = null;
         $admProduto = "";
         $tipoNivel = "";
+        $estado = null;
 
-    if(isset($_POST['btnEnviar'])){
+    $action = "BD/insertNivel.php?modo=inserir";
+    if(isset($_GET['modo'])){
+        if($_GET['modo'] == 'atualizar'){
 
-        $admUsuario = $_POST['rdoadminUsuario'];
-        $admFaleConosco = $_POST['rdoAdminFaleConosco'];
-        $admConteudo = $_POST['rdoAdminConteudo'];
-        $admProduto = $_POST['rdoadminProduto'];
-        $tipoNivel = $_POST['sltadmNivel'];
-    
-    if(!($admConteudo || $admFaleConosco || $admUsuario || $admProduto) == ""){
-        $sql = "insert into tblNivel (administrarUsuario, administrarConteudo, 
-        administrarFaleConosco, administrarProduto, tipo) 
-        values ('".$admUsuario."', '".$admConteudo."', '".$admFaleConosco."', '".$admProduto."', '".$tipoNivel."')";
+            if(isset($_GET['id'])){
+                $id = $_GET['id'];
 
-        # echo($sql); exit;
+                $sql = 'select * from tblNivel where id = '.$id;
 
-        if(mysqli_query($conex, $sql)){
-            echo("<script> alert('Dados Inserido com Sucesso')</script>");
-        }
-        else{
-            echo("<script> alert('Erro ao Inserir os dados')</script>");
+                $selectConteudo = mysqli_query($conex, $sql);
+                if($rsList = mysqli_fetch_assoc($selectConteudo)){
+
+                    $admUsuario = $rsList['administrarUsuario'];
+                    $admFaleConosco = $rsList['administrarFaleConosco'];
+                    $admConteudo = $rsList['administrarConteudo'];
+                    $admProduto = $rsList['administrarProduto'];
+                    $tipoNivel = $rsList['tipo'];
+                    $estado = $rsList['estado'];
+
+                    $action = "BD/updateNivel.php?modo=atualizar&id= ".$rsList['idNivel'];
+
+                }
+            }
         }
     }
-    else{
-        echo("<script> alert('Preencha os Dados')</script>");
-        header('location: admNiveis.php');
-    }
-};
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -52,7 +51,7 @@
             ?>
             <div class="conteudo">
 
-            <form action="admNiveis.php" method="post" name="frmNiveis">
+            <form action="<?=$action?>" method="post" name="frmNiveis">
                 <div class="containerNivel">
                     <select name="sltadmNivel">
                         <p> Nivel de Usuario </p>
@@ -117,7 +116,7 @@
                 <div class="tblNiveis"> 
                     <table >
                         <tr>
-                            <td colspan="5" class="tituloNivel"> Visualizar Niveis Cadastrados </td>
+                            <td colspan="8" class="tituloNivel"> Visualizar Niveis Cadastrados </td>
                         </tr>
                         <tr>
                             <td> Nivel de Acesso </td>
@@ -125,6 +124,9 @@
                             <td> Administra Fale Conosco </td>
                             <td> Administra Usuario </td>
                             <td> Administra Produtos </td>
+                            <td> Editar </td>
+                            <td> Ativar/Desativar </td>
+                            <td> Excluir </td>
                         </tr>
                         <?php 
                             $sql = "SELECT * FROM dbpadokas.tblnivel";
@@ -139,7 +141,29 @@
                             <td><?php if($rsNivel['administrarFaleConosco'] == 1) echo(" Sim "); else { echo(" Não ");}?></td>
                             <td><?php if($rsNivel['administrarUsuario'] == 1) echo(" Sim "); else { echo(" Não ");}?></td>
                             <td><?php if($rsNivel['administrarProduto'] == 1) echo(" Sim "); else { echo(" Não ");}?></td>
-                            
+                            <td>
+                                <a href="admNiveis.php?modo=editar&id=<?=$rsNivel['idNivel']?>">
+                                    <div class="editarUsuario"></div>
+                                </a>
+                            </td>
+                            <td class="imgEstado">
+                                <a onclick="return confirm('Deseja Mesmo Desativar Nivel ?')" href="BD/desativarNivel.php?modo=desativar&id=<?=$rsNivel['idNivel']?>&estado=<?=$rsNivel['estado']?>">
+                                    <?php 
+                                        if($rsNivel['estado'] == 1){
+                                            $img = "img/activate.jpg";
+                                        }
+                                        else if ($rsNivel['estado'] == 0){
+                                            $img = "img/deactivate.jpg";
+                                        }
+                                    ?>
+                                    <img src="<?=$img?>">
+                                </a>
+                            </td>
+                            <td>
+                                <a onclick="return confirm('Deseja mesmo Excluir esse Nivel ?')" href="BD/deleteNivel.php?modo=excluir&id=<?=$rsNivel['idNivel']?>">
+                                    <div class="excluir"></div>
+                                </a>
+                            </td>
                         </tr>
                         <?php
                             }

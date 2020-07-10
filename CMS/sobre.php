@@ -1,4 +1,7 @@
 <?php 
+    $titulo = null;
+    $texto = null;
+
     include_once('BD/conecta.php');
 
     $conex = conexaoMysql();
@@ -9,17 +12,19 @@
         if($_GET['modo'] == 'editarAtualizar');
         $id = $_GET['id'];
 
-        $sql = "select * from tblsobreconteudo where id =".$id;
+        $sql = "select * from tblsobreconteudo where idConteudo = ".$id;
 
         $selectList = mysqli_query($conex, $sql);
+        #echo($sql); exit;
         
         if($rsLista = mysqli_fetch_assoc($selectList)){
             
             $texto = $rsLista['texto'];
             $titulo = $rsLista['titulo'];
-            # $imagem = $rsLista['imagem'];
+            
 
             $action = "BD/updateSobre.php?modo=atualizar&id=".$rsLista['idConteudo'];
+            #echo($action);
         }
     }
 
@@ -61,11 +66,11 @@
                            <tr>
                                 <td class="inputTextTitulo">
                                     <p> Titulo </p>
-                                    <input type="text" name="txtTitulo" value="">
+                                    <input type="text" name="txtTitulo" value="<?=$titulo?>">
                                 </td>
                                 <td class="textAreaConteudo">
                                     <p> Conteudo </p>
-                                    <textarea name="txtConteudo" rows="7" cols="30" maxlength="250"></textarea>
+                                    <textarea name="txtConteudo" rows="7" cols="30" maxlength="250"><?=$texto?></textarea>
                                 </td>
                            </tr>
                         </table>
@@ -95,7 +100,7 @@
                 <div class="sobreTbl">
                     <table>
                         <tr>
-                            <td colspan="5" class="titleSobre"> 
+                            <td colspan="6" class="titleSobre"> 
                                 Visualizar Registros Cadastrados 
                             </td>
                         </tr>
@@ -105,6 +110,7 @@
                             <td> Imagem </td>
                             <td> Ativado/Desativado </td>
                             <td> Editar </td>
+                            <td> Excluir </td>
                         </tr>
                         <?php 
                             $sql = "select * from tblsobreconteudo";
@@ -138,6 +144,11 @@
                             <td class="editar">  
                                 <a href="sobre.php?modo=editarAtualizar&id=<?=$rsSobre['idConteudo']?>">
                                     <img src="img/edit.jpg">
+                                </a>
+                            </td>
+                            <td>
+                                <a onclick="return confirm('Deseja mesmo Excluir o dado ?')" href="BD/deleteSobre.php?modo=excluir&id=<?=$rsSobre['idConteudo']?>">
+                                    <div class="excluir"></div>
                                 </a>
                             </td>
                         </tr>

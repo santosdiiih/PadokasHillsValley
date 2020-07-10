@@ -1,5 +1,7 @@
-<? 
+<?php 
+    include_once('BD/conecta.php');
 
+    $conex = conexaoMysql();
 ?>
 <!DOCTYPE>
 <html lang="pt-br">
@@ -22,52 +24,34 @@
             
             <!--  Area  do conteudo da pagina  -->
             <div class="conteudo">
+
+                <?php 
+                    $sql = 'select * from tblsobreconteudo';
+
+                    $selectDados = mysqli_query($conex, $sql);
+
+                    while($rsSobre = mysqli_fetch_assoc($selectDados)){
+
+                    
+                ?>
+
                 <div class="conteudoSobre alinhamentoAoCentro">
                     <div id="sobreInicio" class="texto alinhamentoAoCentro">
-                        <h1> Sobre Inicio </h1>
+                        <h1><?=$rsSobre['titulo']?></h1>
                         <p>
-                            O inicio foi o nosso primeiro desafio, ninguem conhecia a nossa marca e com tantas marcas consagradas, tivemos que lutar duro para provar o nosso valor.
+                           <?=$rsSobre['texto']?>
                         </p>
                     </div>
                     <div id="sobreImagem" class="alinhamentoAoCentro">
                         <figure>
-                            <img src="imagens/boas-vindas.jpg" alt="imagem boas de vindas"> 
+                            <img src="../CMS/BD/arquivo/<?=$rsSobre['imagem']?>"> 
                         </figure>                        
                     </div>
                 </div>
-                <div class="conteudoSobre alinhamentoAoCentro">
-                    <div id="sobreComoFoi" class="texto alinhamentoAoCentro">
-                       <h1> Como foi o Inicio </h1>
-                        <p>
-                            Diante de um mercado de trabalho tão competitivo selecionamos os nossos melhores candidatos depositando toda a nossa confiança em seu trabalho e valorizando seu potencial.
-                        </p>
-                    </div>
-                    <div id="sobreImagemComoFoi" class="alinhamentoAoCentro">
-                        <figure>
-                            <img src="imagens/contratacao-e-recrutamento-de-novos-funcionarios.jpg">
-                        </figure>
-                    </div>
-                </div>
-                <div class="conteudoSobre alinhamentoAoCentro">
-                    <div id="sobreAtualmente" class="texto alinhamentoAoCentro">
-                        <h1> Atualmente </h1>
-                        <p> 
-                            O nosso quadro de funcionario vem crescendo, sempre atendendo e dando oportunidade a todos, pois todos merecem um voto de confiança. 
-                        </p>
-                    </div>
-                    <div id="sobreImagemAtualmente" class="alinhamentoAoCentro"> 
-                        <figure>
-                            <img src="imagens/bakery-business.jpg">
-                        </figure>
-                    </div>
-                    <div id="sobreInformacoesAdicionais" class="texto alinhamentoAoCentro">
-                        <h1> Informações Adicionais </h1>
-                        <p>
-                            Caso esteja interessado em fazer parte de uma das maiores redes alimenticias da América Latina entre em contato e deixe seu curriculo que uma hora retornaremos o contato.
-                        </p>
-                    </div>
-                </div>
                 
+                <?php 
+                    }
+                ?>
             </div>
                         <?php 
                 include_once("footer.php")

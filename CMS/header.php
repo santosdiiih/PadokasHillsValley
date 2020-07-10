@@ -26,8 +26,12 @@
                      <p> Admin - Usuarios </p>
                    </a>
                 </div>
+                <?php 
+                    session_start();
+                    $user = $_SESSION['nomeUsuario'];
+                ?>
                 <div class="userLog">
-                    <p> Bem vindo: </p> [Ingrid Aparecida]
+                    <p> Bem vindo: </p> [<?=$user?>]
                     <p class="logOut">Logout</p>
                 </div>
             </div>

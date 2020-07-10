@@ -412,9 +412,8 @@ h1 {
         align-content: center;
         z-index: 766;
     }
-    #sobreAtualmente,
-    #sobreInformacoesAdicionais {
-        width: 30%;
+    #sobreAtualmente {
+        width: 60%;
         height: inherit;
         float: left;
         padding: 10px;
