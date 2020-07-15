@@ -20,7 +20,7 @@
         # criptograma a senha que vai para o banco
         $senha = md5($senha);
 
-        $profissao = $_POST['txtProfissao'];
+        
         # $nivelAcesso = $rsTipo['tipo'];
         $idNivel = $_POST['sltNivel'];
 
@@ -84,7 +84,7 @@
                         <div  class="input">  
                         <select name="sltNivel">
                                 
-                                <option value=""> Selecione um Nivel</option>
+                                <option value=""> Selecione um Nivel </option>
                                 <?php 
 
                                     $sql = "select * from tblNivel

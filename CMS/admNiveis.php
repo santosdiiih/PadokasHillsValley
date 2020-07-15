@@ -7,7 +7,7 @@
         $admFaleConosco = null;
         $admConteudo = null;
         $admProduto = "";
-        $tipoNivel = "";
+        $tipoNivel = null;
         $estado = null;
 
     $action = "BD/insertNivel.php?modo=inserir";

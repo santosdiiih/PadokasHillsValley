@@ -1,4 +1,7 @@
 <?php
+    if(session_status() == "PHP_SESSION_ACTIVE "){
+        session_destroy();
+    }
     $nome = null;
     $senha = null;
     if(isset($_POST['btnEnviar'])){
@@ -7,7 +10,10 @@
         $conex = conexaoMysql();
 
         $nome = $_POST['txtNome'];
-        $senha = $_POST['txtSenha'];
+        $senha = $_POST['txtSenha']; 
+
+        session_start();
+        $_SESSION['nomeUser'] = $nome;
 
         $senha = md5($senha);
 
@@ -34,9 +40,7 @@
             
         }
 
-        session_start();
-        $_SESSION['nomeUsuario'] = $user;
-        echo($user);
+        
 
     }
 ?>

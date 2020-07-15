@@ -1,10 +1,6 @@
 <?php 
     include_once('BD/conecta.php');
     $conex = conexaoMysql();
-
-    
-    
-
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -90,15 +86,12 @@
 
                                         while ($rsUsuario = mysqli_fetch_assoc($selectUsuario)) {
                                             
-                                            ?>
-
+                                            ?>  
                                 <tr>
                                     <td><?=$rsUsuario['nome']?></td>
                                     <td><?=$rsUsuario['login']?></td>
                                     <td><?=$rsUsuario['senha']?></td>
-                                    <td><?=$rsUsuario['tipo']?></td>
-                                    
-                                    
+                                    <td><?=$rsUsuario['tipo']?></td>            
                                     
                                     <td class="editarUser">
                                         <!-- href="visualizarUsuario.php?modo=editar&id=<?=$rsUsuario['idUsuario']?>" -->

@@ -1,8 +1,8 @@
-create database dbpadokasContato;
+create database dbpadokas;
 
-use dbpadokasContato;
+use dbpadokas;
 
-select dbpadokasContato;
+
 
 create table tblContato(
 	idContato  int not null auto_increment primary key,  
