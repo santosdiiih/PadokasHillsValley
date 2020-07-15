@@ -1,7 +1,7 @@
 <?php 
     if(isset($_GET["btLogout"])){
         session_destroy();
-        header("location: http://localhost/Diiih/php/Projeto-Semestral/");
+        header("location: ../Projeto-Semestral/index.php");
     }
 
 ?>
